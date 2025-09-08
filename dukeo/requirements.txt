@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+httpx
+pydantic[email]
+python-dotenv
+sqlmodel
+prometheus-fastapi-instrumentator
+structlog
+python-telegram-bot
+email-message
+
