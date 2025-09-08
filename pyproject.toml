@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=75.0", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dukeo"
+version = "0.1.0"
+description = "Bot di trading automatico"
+authors = [{name = "Nome Utente", email = "you@example.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.12"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+httpx = "*"
+pydantic = {extras = ["email"], version = "*"}
+python-dotenv = "*"
+sqlmodel = "*"
+prometheus-fastapi-instrumentator = "*"
+structlog = "*"
+python-telegram-bot = "*"
+email-message = "*"
+
+[tool.poetry.dev-dependencies]
+ruff = "*"
+black = "*"
+isort = "*"
+mypy = "*"
+pytest = "*"
+pytest-asyncio = "*"
+pre-commit = "*"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+lint.select = ["E", "F", "UP", "SIM", "I"]
+lint.ignore = ["D100", "D101", "D104", "E402"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+

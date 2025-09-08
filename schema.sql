@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS orders(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  order_id TEXT,
+  symbol TEXT,
+  side TEXT,
+  size REAL,
+  price REAL,
+  status TEXT,
+  entry_ts DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS audit_log(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  order_id TEXT,
+  action TEXT,
+  details TEXT,
+  ts DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
